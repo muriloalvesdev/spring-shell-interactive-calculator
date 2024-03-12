@@ -21,10 +21,12 @@ public class SubtractionCommand {
 
     /**
      * Método do Spring Shell para subtrair números em uma expressão matemática.
+     *
      * @param expression A expressão matemática a ser processada. Esta expressão pode conter números e operadores de subtração.
+     * @return
      */
     @ShellMethod(value = "Subtract numbers", key = "subtract")
-    public void subtractNumbers(@ShellOption(help = "subtraction mathematical expression") String expression) {
+    public String subtract(@ShellOption(help = "subtraction mathematical expression") String expression) {
         String cleanExpression = OperationUtils.removeAllWhitespace(expression);
 
         String[] numbers = OperationUtils.splitExpressionByOperator(cleanExpression, "-");
@@ -35,7 +37,6 @@ public class SubtractionCommand {
             result -= Integer.parseInt(OperationUtils.removeCommasAndDots(numbers[i]));
         }
 
-        System.out.println("result: " + result);
-        System.out.println();
+        return "result: " + result;
     }
 }

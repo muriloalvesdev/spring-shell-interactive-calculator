@@ -18,10 +18,12 @@ public class SumCommand {
 
     /**
      * Método do Spring Shell para somar números em uma expressão matemática.
+     *
      * @param expression A expressão matemática a ser processada. Esta expressão pode conter números e operadores de soma.
+     * @return
      */
     @ShellMethod(value = "Sum numbers", key = "sum")
-    public void sumNumbers(@ShellOption(help = "sum mathematical expression") String expression) {
+    public String sum(@ShellOption(help = "sum mathematical expression") String expression) {
         String cleanExpression = OperationUtils.removeAllWhitespace(expression);
 
         String[] numbers = OperationUtils.splitExpressionByOperator(cleanExpression, "+");
@@ -32,7 +34,6 @@ public class SumCommand {
             result += Integer.parseInt(OperationUtils.removeCommasAndDots(numbers[i]));
         }
 
-        System.out.println("result: " + result);
-        System.out.println();
+        return "result: " + result;
     }
 }
