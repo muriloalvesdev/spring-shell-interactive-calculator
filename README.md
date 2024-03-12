@@ -14,13 +14,13 @@ Para usar a calculadora, siga estes passos:
 1. Clone o repositório:
 
     ```bash
-    git clone https://github.com/muriloalvesdev/interactive-calculator.git
+    git clone https://github.com/muriloalvesdev/spring-shell-interactive-calculator.git
     ```
 
 2. Navegue até o diretório do projeto:
 
     ```bash
-    cd interactive-calculator 
+    cd spring-shell-interactive-calculator 
     ```
 
 3. Compile o projeto:
