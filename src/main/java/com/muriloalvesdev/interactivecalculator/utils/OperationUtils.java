@@ -1,5 +1,7 @@
 package com.muriloalvesdev.interactivecalculator.utils;
 
+import java.util.regex.Pattern;
+
 /**
  * Esta classe fornece métodos para manipulação de strings, como remoção de espaços em branco,
  * divisão de strings por operadores e remoção de vírgulas e pontos.
@@ -24,7 +26,7 @@ public final class OperationUtils {
      * @return Um array de strings contendo as substrings resultantes da divisão.
      */
     public static String[] splitExpressionByOperator(String str, String operator) {
-        return str.split(operator);
+        return str.split(Pattern.quote(operator));
     }
 
     /**
