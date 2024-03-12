@@ -58,3 +58,18 @@ Aqui está um exemplo de uso da calculadora:
 ```bash
 $ sum 1 + 2 + 3
 result: 6
+```
+
+## Propósito do Projeto
+
+Este projeto foi criado com o propósito de servir como um exemplo para pessoas que estiverem pesquisando sobre o uso do Spring Shell para construir aplicativos interativos de linha de comando.
+
+## Contribuições
+Se você está interessado em contribuir para este projeto, sua participação é muito bem-vinda! Sinta-se à vontade para abrir um pull request e ajudar a expandir suas funcionalidades. Embora atualmente o projeto inclua apenas operações de adição e subtração, há espaço para implementar novas operações, como divisão e multiplicação. 😉
+
+
+
+
+
+
+
